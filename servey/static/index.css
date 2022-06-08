@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: rgba(98, 95, 241, 0.635);
+}
+.cards{
+    width: 90%;
+    margin-left: 3%;
+    margin-bottom: 3%;
+    background-color: rgba(40, 39, 151, 0.635);
+    padding-left: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+    display: grid;
+}
+.heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: black !important;
+}
+p{
+    font-weight: 500;
+}
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: hsl(39, 100%, 50%);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+label{
+    margin-left: 1%;
+}
+#AGE , #NAME{
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    color: black;
+    padding-left: 1%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    height: 40px;
+}
+
+span{
+    padding: 1%;
+    font-size: 15px;
+}
+.card{
+    margin: 1%;
+}
+.lastdiv{
+    margin-top: 2%;
+}
+#submit{
+    width:max-content;
+    margin-left: 40%;
+    padding: 0.8rem;
+    background: rgb(7, 173, 7);
+    color: white;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    border: none;
+}
+@media screen and (max-width:720px){
+    .cards{
+        margin-left: 5%;
+        padding: 3%;
+        display: flex !important;
+        flex-direction: column;
+    }
+    .card{
+        padding-bottom: 5% !important;
+    }
+    *{
+        font-size: 15px;
+    }
+    .heading{
+        font-size: 20px;
+    }
+    
+}
+@media (orientation: landscape){
+    .cards{
+        margin: auto;
+    }
+}
+
+input[type='range']{
+    cursor: pointer;
+    width: 250px;
+}
+/* .cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.card{
+    background-color: black;
+    padding: 2%;
+    width: 300px;
+} */
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding-left: 0;
+    padding-bottom: 0;
+}
+.card{
+    background-color: black;
+    text-align: center;
+    padding: 2%;
+    padding-bottom: 5%;
+    border-radius: 10px;
+}
+body, .continer, .cards{
+    background-color: #2e2e2e;
+}
+.heading{
+    color: white !important;
+}
+.lastdiv{
+    grid-column: 2 / 4;
+}
+input{
+    text-align: center;
+    font-weight: bold;
+}

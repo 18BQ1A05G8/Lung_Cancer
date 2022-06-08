@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'results.css' %}"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'icon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'icon/favicon-32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'icon/favicon-16.png' %}">
+    <link rel="manifest" href="{% static 'icon/site.webmanifest' %}">
+    <title>Results</title>
+</head>
+ 
+<body>
+    <div class="continer">
+        <div class="card">
+            <a id="return" href="{% url 'home' %}">֎</a>
+            <p>Hello {{name}}!</p>
+            <p>According to our prediction</p>
+            {% if res_ann %}
+                <p><span class="highlight" style="--validColor:#FF0800;">You may have Lung Cancer</span>, Please Contact a Doctor 👨‍⚕️</p>
+                {% if cough %}
+                    <p>But Coughing of blood is a serious problem please consult docter immediately.</p>
+                {% endif %}
+                <a href="https://www.askapollo.com/specialitypages/specialty/oncology?utm_source=paid&utm_medium=CPC&utm_campaign=TM_Oncology_COE_Search&utm_id=Search+Campaign&utm_source=paid&utm_medium=googleads&utm_campaign=12290570788&utm_adgroup=121399649910&utm_term=oncologist%20appointment&creative=546918521008&device=c&devicemodel=&matchtype=p&feeditemid=&targetid=kwd-928038756609&network=g&placement=&adposition=&GA_loc_interest_ms=&GA_loc_physical_ms=1007743&gclid=Cj0KCQjw29CRBhCUARIsAOboZbLxnFmh3Yhf9ScaQqcf9FJaUCN2A6O166SD-BxggFBlhEzYNeqXGisaAsSBEALw_wcB" target="_BLANK">Click here to book an appointment></a>
+            {% else %}
+                {% if cough %}
+                    <p><span class="highlight" style="--validColor:#FFFF00;">You are not showing any signs of Lung Cancer!</span> But Coughing of blood is a serious problem please consult docter immediately.</p>
+                {% else %}
+                    <p><span class="highlight" style="--validColor:#00FF40;">You are not showing any signs of Lung Cancer!</span> Better to get some rest 😊 </p>
+                {% endif %}
+            {% endif %}
+        </div>
+        <div class="card">
+            <fieldset>
+                <legend>Key Notes</legend>
+                <div class="note">
+                    <p class="notehead">Smoking:</p>
+                    <p>
+                        Alcohol consumption was associated with an increased risk for lung
+                        cancer among men consuming at least 21 drinks per week.
+                    </p>
+                </div>
+                <div class="note">
+                    <p class="notehead">Smoking + Drinking:</p>
+                    <p>
+                        "Dr. Lynch says. "There's a much more exponential synergy when
+                        you combine alcohol and smoking." People who drink and smoke are
+                        15 times more likely to develop cancer in the mouth and throat
+                        than non-drinkers and non-smokers, according to the NIH.
+                    </p>
+                </div>
+                
+                <div class="note">
+                    <p class="notehead">Dysphagia:</p>
+                    <p>
+                        Many patients with lung cancer experience difficulty in
+                        swallowing. The medical term for this symptom is dysphagia and
+                        refers to any dysfunction in swallowing. Dysphagia can occur due
+                        to a number of reasons, including the direct impact of tumors,
+                        chemotherapy, radiation therapy, and targeted therapies such as
+                        EGFR (epidermal growth factor receptor) inhibitors.
+                    </p>
+                </div>
+                <div class="note">
+                    <p class="notehead">Yellow finger:</p>
+                    <p>
+                        The skin can be affected by lung cancer that has spread, different
+                        syndromes associated with lung cancer, and treatments for lung
+                        cancer. Yellow skin, itchy skin, easy bruising, swelling, and
+                        changes in facial sweating may be seen. If lung cancer has spread
+                        to the pancreas or liver, it may cause jaundice. Jaundice is when
+                        your skin or the whites of your eyes turn yellow. It is caused by
+                        a build-up of bilirubin in the body.
+                    </p>
+                </div>
+                <div class="note">
+                    <p class="notehead">Fatigue:</p>
+                    <p>
+                        A low red blood cell count, or anemia, is a very common effect of
+                        lung cancer. Anemia can make you really tired because your body's
+                        tissues aren't getting enough 14 oxygen. And generally speaking,
+                        cancer cells like to feed off the nutrients you need to power
+                        through a day.
+                    </p>
+                </div>
+                <div class="note">
+                    <p class="notehead">Chronic diseases:</p>
+                    <p>Chronic obstructive pulmonary disease (COPD) is a significant risk
+                        factor for lung cancer. Approximately 1% of COPD patients develop lung cancer every
+                        year, which may be associated with genetic susceptibility to cigarette smoke.
+                    </p>
+                </div>
+                <div class="note">
+                    <p class="notehead">Chronic + Difficult is breathing:</p>
+                    <p>Asthma is a chronic condition of the lungs that causes
+                        narrowing and inflammation of the airways. It also causes an increase in mucus
+                        production in the air passages, which may decrease airflow while breathing. This
+                        especially affects breathing out, according to a 2021 research article.
+                    </p>
+                </div>
+                <div class="note">
+                    <p class="notehead">Peer Pressure:</p>
+                    <p>The current aggregated meta-analysis revealed that peer pressure had a
+                        significant influence on cigarette smoking: OR: 2.68(95% CI:2.37,3.03) by
+                        ncbi.nlm.nih.gov</p>
+                </div>
+                <div class="note">
+                    <p class="notehead">Hemoptysis:</p>
+                    <p>Lung cancer is responsible for approximately 23% of all cases of
+                        hemoptysis. The highest incidence of bleeding occurs in patients with squamous cell
+                        histology, and massive hemoptysis was associated with both cavitation and tumour
+                        arising from or eroding through the central airways.</p>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</body>
+
+</html>
+

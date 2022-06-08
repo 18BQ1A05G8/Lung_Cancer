@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'icon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'icon/favicon-32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'icon/favicon-16.png' %}">
+    <link rel="manifest" href="{% static 'icon/site.webmanifest' %}">
+</head>
+
+<body>
+    <div class="continer">
+        <p class="heading">Lung Cancer Prediction</p>
+        <form action="{% url 'results' %}" method="post">
+            {% csrf_token %}
+            <div class="cards">
+                <div class="card">
+                    <p>Name</p>
+                    <input required type="text" name="NAME" id="NAME">
+                </div>
+                <div class="card">
+                    <p>Gender</p>
+                    <input required type="radio" name="GENDER" value="1"><label for="GENDER" class="gender">M</label>
+                    <input required type="radio" name="GENDER" value="0" checked><label for="GENDER"
+                        class="gender">F</label>
+                </div>
+                <div class="card">
+                    <p>age</p>
+                    <input required type="number" name="AGE" id="AGE" min="5" max="99">
+                </div>
+                <div class="card">
+                    <p>Do you have a habit of smoking? </p>
+                    <input required type="radio" name="SMOKING" value="1"><label class="yes">YES</label>
+                    <input required type="radio" name="SMOKING" value="0" checked><label class="no">NO</label>
+                </div>
+                <div class="card">
+                    <p>Is your skin turning yellow?</p>
+                    <input required type="radio" name="YELLOW_FINGERS" value="1"><label class="yes">YES</label>
+                    <input required type="radio" name="YELLOW_FINGERS" value="0" checked><label for="" class="no"
+                        checked>NO</label>
+                </div>
+                <div class="card">
+                    <p>How offen do you feel anxiety? </p>
+                    <span>0</span><input required type="range" id="ANXIETY" name="ANXIETY" min="0"
+                        max="10"><span>10</span>
+                </div>
+                <div class="card">
+                    <p>Do you have any peer pressure? </p>
+                    <input required type="radio" name="PEER_PRESSURE" value="1"><label class="yes">YES</label>
+                    <input required type="radio" name="PEER_PRESSURE" value="0" checked><label for=""
+                        class="no">NO</label>
+                </div>
+                <div class="card">
+                    <p>Do you have any Chronic Diseases? </p>
+                    <input required type="radio" name="CHRONIC_DISEASE" value="1"><label class="yes">YES</label>
+                    <input required type="radio" name="CHRONIC_DISEASE" value="0" checked><label for=""
+                        class="no">NO</label>
+                </div>
+                <div class="card">
+                    <p>How offen do you feel fatigue (tired)?</p>
+                    <span>0</span><input required type="range" id="FATIGUE" name="FATIGUE" min="0"
+                        max="10"><span>10</span>
+                </div>
+                <div class="card">
+                    <p>Are you allergic of any type?</p>
+                    <input required type="radio" name="ALLERGY" value="1"><label class="yes">YES</label>
+                    <input required type="radio" name="ALLERGY" value="0" checked><label for="" class="no">NO</label>
+                </div>
+                <div class="card">
+                    <p>Do you have a habbit of Wheezing?</p>
+                    <input required type="radio" name="WHEEZING" value="1"><label class="yes">YES</label>
+                    <input required type="radio" name="WHEEZING" value="0" checked><label for="" class="no">NO</label>
+                </div>
+                <div class="card">
+                    <p>Do you have a habbit of Alcohol consuming?</p>
+                    <input required type="radio" name="ALCOHOL_CONSUMING" value="1"><label class="yes">YES</label>
+                    <input required type="radio" name="ALCOHOL_CONSUMING" value="0" checked><label for=""
+                        class="no">NO</label>
+                </div>
+                <div class="card">
+                    <p>Coughing up blood? (Hemoptysis)</p>
+                    <input required type="radio" name="COUGHING" value="1"><label class="yes">YES</label>
+                    <input required type="radio" name="COUGHING" value="0" checked><label for="" class="no">NO</label>
+                </div>
+                <div class="card">
+                    <p>Do you have difficulty in breathing?</p>
+                    <input required type="radio" name="SHORTNESS_OF_BREATH" value="1"><label class="yes">YES</label>
+                    <input required type="radio" name="SHORTNESS_OF_BREATH" value="0" checked><label for=""
+                        class="no">NO</label>
+                </div>
+                <div class="card">
+                    <p>Do you have Dysphagia?</p>
+                    <input required type="radio" name="SWALLOWING_DIFFICULTY" value="1"><label class="yes">YES</label>
+                    <input required type="radio" name="SWALLOWING_DIFFICULTY" value="0" checked><label for=""
+                        class="no">NO</label>
+                </div>
+                <div class="card">
+                    <p>Do you have any chest pain?</p>
+                    <input required type="radio" name="CHEST_PAIN" value="1"><label class="yes">YES</label>
+                    <input required type="radio" name="CHEST_PAIN" value="0" checked><label for="" class="no">NO</label>
+                </div>
+                <div class="lastdiv">
+                    <button type='submit' id='submit' >Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

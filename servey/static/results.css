@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+}
+.continer{
+    width:100%;
+    /* background-color: rgba(98, 95, 241, 0.635); */
+    background-color: #2e2e2e;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card{
+    width: 40%;
+    padding: 2%;
+    background-color: black;
+    border-radius: 10px;
+    /* position: absolute; */
+}
+p{
+    font-weight: 500;
+}
+p:first-child{
+    width: max-content;
+    padding: 0%;
+}
+#return{
+    position: relative;
+    text-decoration: none;
+    float: left;
+    left: 99%;
+    margin-top: -4%;
+    font-weight: bolder;
+    transition: all 0.1s ease-in;
+    font-weight: bolder;
+    /* margin-bottom: 2%; */
+}
+#return:hover{
+    font-size: 25px;
+    color: brown;
+    transform: rotate(-90deg);
+    left: 98%;
+    transition: all 0.1s ease-out;
+}
+
+@media screen and (max-width:720px){
+    .card{
+        width: 70%;
+        padding: 4%;
+        margin-top: 5%;
+    }
+    *{
+        font-size: 15px;
+    }
+    .continer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+fieldset{
+    line-height: 35px;
+    padding: 3%;
+}
+.notehead{
+    background-color: white;
+    color: black;
+    padding: 0.5% !important;
+    border-radius: 10px;
+}
+.card:last-child{
+    overflow-y: scroll;
+    height: 80vh;
+
+}
+.highlight{
+    background-color: var(--validColor);
+    padding: 1%;
+    border-radius: 5px;
+    color: black;
+}
